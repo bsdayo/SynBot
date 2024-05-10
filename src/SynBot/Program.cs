@@ -3,6 +3,9 @@ using Microsoft.Extensions.Hosting;
 using SynBot;
 using SynBot.Options;
 using SynBot.Services;
+using SynBot.Utilities;
+
+AppSettings.CreateIfNotExists();
 
 var builder = new HostApplicationBuilder(args);
 

@@ -17,6 +17,7 @@ RUN apk add --no-cache tzdata
 ENV TZ="Asia/Shanghai"
 
 COPY --from=build /repo/publish /app
-WORKDIR /app
+
+WORKDIR /data
 
 ENTRYPOINT ["dotnet", "/app/SynBot.dll"]
